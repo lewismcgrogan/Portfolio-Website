@@ -2,10 +2,11 @@ export const profile = {
   name: "Lewis McGrogan",
   title: "Final-year MEng Computer Science Student",
   tagline:
-    "Full-stack software engineer with strengths in React, APIs, and backend systems — alongside applied ML and distributed systems.",
+    "Full-stack developer (React/TypeScript + APIs) with applied machine learning experience — building clean, maintainable systems end-to-end.",
 
   location: "Belfast, Northern Ireland",
   email: "lewismartinmcgrogan@gmail.com",
+
 
   links: {
     github: "https://github.com/lewismcgrogan",
@@ -14,42 +15,28 @@ export const profile = {
   },
 
   about: [
-    "Final-year MEng Computer Science student at Queen’s University Belfast with a strong academic record and a practical focus on full-stack web development, backend systems, and applied machine learning.",
-    "Experienced in designing and building full-stack applications end-to-end — from React and TypeScript frontends to RESTful APIs, data handling, and deployment.",
-    "Comfortable working across the stack: translating requirements into clean UI, structuring backend logic, and integrating services with clear API boundaries.",
-    "Currently seeking graduate roles across software engineering, full-stack development, and backend engineering (2026).",
+    "Final-year MEng Computer Science student at Queen’s University Belfast with a strong academic record and a practical focus on full-stack web development and applied machine learning.",
+    "I build web applications end-to-end: React + TypeScript frontends, REST API integration, and backend logic with clean interfaces and maintainable structure.",
+    "Alongside full-stack work, I’ve built reproducible ML pipelines in PyTorch, including experimental evaluation and model performance analysis.",
+    "Currently seeking graduate software engineering roles (full-stack / backend / applied ML) starting 2026.",
   ],
 
   skills: {
-    languages: ["Java", "Python", "TypeScript", "MATLAB", "C#", "SQL"],
-    frameworks: ["React", "Next.js", "PyTorch", ".NET"],
-    tools: [
-      "Git/GitHub",
-      "REST APIs",
-      "Docker",
-      "Linux",
-      "SLURM",
-      "Vite",
-    ],
+    languages: ["TypeScript", "Java", "Python", "C#", "SQL", "MATLAB"],
+    frameworks: ["React", "Next.js", ".NET", "PyTorch"],
+    tools: ["Git/GitHub", "REST APIs", "Docker", "Linux", "Vite", "SLURM"],
   },
 
   projects: [
     {
       name: "CSC4008 Team Software Design Project",
       description:
-        "Team-based full-stack web application delivered for CSC4008, focused on scalable design, collaboration, and maintainable frontend–backend integration.",
-      tech: [
-        "React",
-        "TypeScript",
-        "REST APIs",
-        "Full-Stack Development",
-        "Software Design",
-      ],
+        "Team-delivered full-stack application with an emphasis on clean design, modularity, and frontend–backend integration.",
+      tech: ["React", "TypeScript", "REST APIs", "Software Design"],
       highlights: [
-        "Designed and implemented core frontend features using React and TypeScript.",
-        "Integrated frontend components with backend REST APIs using clear contracts.",
-        "Worked within a multi-developer team, following agreed architecture and coding standards.",
-        "Focused on maintainability, modular structure, and readable, production-style code.",
+        "Built within a multi-developer team using agreed architecture and coding standards.",
+        "Implemented key frontend features and integrated them with backend API endpoints.",
+        "Focused on maintainability: clear module boundaries, consistent patterns, and readable code.",
       ],
       links: {
         repo: "https://github.com/lewismcgrogan/CSC4008-Team-Software-Design-Project",
@@ -59,12 +46,11 @@ export const profile = {
     {
       name: "LewisChessGame",
       description:
-        "Full-stack style single-page application built with React and TypeScript, featuring a responsive UI and rule enforcement via a chess engine library.",
+        "React + TypeScript chess app with legal-move enforcement using chess.js and a clean, responsive UI.",
       tech: ["React", "TypeScript", "chess.js"],
       highlights: [
-        "Built an interactive, responsive frontend with clear component structure.",
-        "Integrated game logic cleanly via a third-party engine library.",
-        "Focused on state management and maintainable UI logic.",
+        "Built an interactive UI with predictable state updates and reusable components.",
+        "Used a dedicated rules engine to ensure correct move validation and gameplay logic.",
       ],
       links: {
         repo: "https://github.com/lewismcgrogan/LewisChessGame",
@@ -74,11 +60,11 @@ export const profile = {
     {
       name: "DistributedChat",
       description:
-        "Distributed peer-to-peer chat system with real-time messaging and file transfer.",
+        "Multi-client chat system using Java sockets and concurrency primitives to support concurrent connections and messaging.",
       tech: ["Java", "Sockets", "Concurrency"],
       highlights: [
-        "Designed a multi-node messaging workflow with clear separation of concerns.",
-        "Implemented reliable communication patterns using core concurrency primitives.",
+        "Implemented thread-safe client handling for concurrent connections and broadcasting.",
+        "Designed clean separation of concerns for connection handling, messaging, and lifecycle management.",
       ],
       links: {
         repo: "https://github.com/lewismcgrogan/DistributedChat",
@@ -88,11 +74,11 @@ export const profile = {
     {
       name: "Facial Recognition System",
       description:
-        "MATLAB facial detection and recognition pipeline using feature extraction and classical machine learning classifiers.",
-      tech: ["MATLAB", "Computer Vision", "HOG", "LBP", "SVM", "KNN"],
+        "Classical facial recognition pipeline using handcrafted feature extraction and traditional ML classifiers.",
+      tech: ["MATLAB", "HOG", "LBP", "Gabor", "SVM", "KNN"],
       highlights: [
-        "Combined multiple feature extractors with traditional classifiers for robust performance.",
-        "Built a structured evaluation pipeline for comparing approaches.",
+        "Compared multiple feature extractors and classifiers to evaluate performance trade-offs.",
+        "Built a structured evaluation workflow for repeatable experiments and results comparison.",
       ],
       links: {
         repo: "https://github.com/lewismcgrogan/Facial-Recognition-System",
@@ -106,10 +92,7 @@ export const profile = {
       course: "MEng Computer Science",
       school: "Queen’s University Belfast",
       dates: "Sep 2022 — May 2026",
-      notes: [
-        "Final-year average: 81%",
-        "Expected classification: First-Class Honours / 2:1",
-      ],
+      notes: ["Final-year average: 81%", "Expected: First-Class Honours / 2:1"],
     },
     {
       course: "A-Levels / GCSEs",
