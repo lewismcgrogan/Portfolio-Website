@@ -18,7 +18,7 @@ export const profile = {
     "Final-year MEng Computer Science student at Queen’s University Belfast with a strong academic record and a practical focus on full-stack web development and applied machine learning.",
     "I build web applications end-to-end: React + TypeScript frontends, REST API integration, and backend logic with clean interfaces and maintainable structure.",
     "Alongside full-stack work, I’ve built reproducible ML pipelines in PyTorch, including experimental evaluation and model performance analysis.",
-    "Currently seeking graduate software engineering roles (full-stack / backend / applied ML) starting 2026.",
+    "Currently seeking graduate software engineering roles starting 2026.",
   ],
 
   skills: {
@@ -35,7 +35,7 @@ export const profile = {
       tech: ["React", "TypeScript", "REST APIs", "Software Design"],
       highlights: [
         "Built within a multi-developer team using agreed architecture and coding standards.",
-        "Implemented key frontend features and integrated them with backend API endpoints.",
+        "Implemented all frontend features and integrated them with backend API endpoints.",
         "Focused on maintainability: clear module boundaries, consistent patterns, and readable code.",
       ],
       links: {
@@ -46,7 +46,7 @@ export const profile = {
     {
       name: "LewisChessGame",
       description:
-        "React + TypeScript chess app with legal-move enforcement using chess.js and a clean, responsive UI.",
+        "(Personal Project) React + TypeScript chess app with legal-move enforcement using chess.js and a clean, responsive UI.",
       tech: ["React", "TypeScript", "chess.js"],
       highlights: [
         "Built an interactive UI with predictable state updates and reusable components.",

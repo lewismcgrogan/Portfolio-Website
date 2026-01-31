@@ -237,7 +237,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-sky-100/70 via-white/40 to-blue-100/60" />
               <div className="relative">
                 <div className="text-sm font-semibold text-slate-900">
-                  Quick snapshot
+                  Snapshot
                 </div>
                 <p className="mt-1 text-sm text-slate-600">
                   A quick overview of what I build — clean engineering, strong
@@ -281,8 +281,8 @@ export default function Home() {
 
         <Section
           id="about"
-          title="About"
-          subtitle="A short intro — clear and to the point."
+          title="About Me"
+          subtitle="A short intro:"
         >
           <div className="grid gap-4 md:grid-cols-3">
             <Card className="md:col-span-2">
@@ -317,8 +317,8 @@ export default function Home() {
 
         <Section
           id="projects"
-          title="Projects"
-          subtitle="A few highlights — with links you can actually click."
+          title="Selected Projects"
+          subtitle="A few highlights - with links to repositories."
         >
           <div className="grid gap-4 md:grid-cols-2">
             {featured.map((p: any) => (
