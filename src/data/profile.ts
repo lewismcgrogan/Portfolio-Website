@@ -2,7 +2,7 @@ export const profile = {
   name: "Lewis McGrogan",
   title: "Final-year MEng Computer Science Student",
   tagline:
-    "Full-stack developer (React/TypeScript + APIs) with applied machine learning experience — building clean, maintainable systems end-to-end.",
+    "Full-stack developer (React/TypeScript + APIs) with applied machine learning experience — clean, maintainable systems end-to-end.",
 
   location: "Belfast, Northern Ireland",
   email: "lewismartinmcgrogan@gmail.com",

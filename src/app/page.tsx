@@ -217,19 +217,23 @@ export default function Home() {
                 {profile.location}
               </p>
 
-              <p className="mt-4 max-w-2xl text-slate-700">{profile.tagline}</p>
+              <p className="mt-4 max-w-2xl text-slate-700">
+                {profile.tagline}
+              </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                <PrimaryButton href={`mailto:${profile.email}`}>Email me</PrimaryButton>
-                <SecondaryButton href={profile.links.github}>GitHub</SecondaryButton>
-                <SecondaryButton href={profile.links.linkedin}>LinkedIn</SecondaryButton>
-                <SecondaryButton href={profile.links.cv}>Download CV</SecondaryButton>
-              </div>
-
-              <div className="mt-7 flex flex-wrap gap-2">
-                <GhostPill>{profile.projects.length} projects</GhostPill>
-                <GhostPill>{profile.skills.languages.length}+ languages</GhostPill>
-                <GhostPill>Backend + systems</GhostPill>
+                <PrimaryButton href={`mailto:${profile.email}`}>
+                  Email me
+                </PrimaryButton>
+                <SecondaryButton href={profile.links.github}>
+                  GitHub
+                </SecondaryButton>
+                <SecondaryButton href={profile.links.linkedin}>
+                  LinkedIn
+                </SecondaryButton>
+                <SecondaryButton href={profile.links.cv}>
+                  Download CV
+                </SecondaryButton>
               </div>
             </div>
 
@@ -240,8 +244,9 @@ export default function Home() {
                   Snapshot
                 </div>
                 <p className="mt-1 text-sm text-slate-600">
-                  A quick overview of what I build — clean engineering, strong
-                  fundamentals, and projects you can skim in a minute.
+                  A quick overview of what I can build, and have built — clean
+                  engineering, strong fundamentals, and projects you can skim in
+                  a minute.
                 </p>
 
                 <div className="mt-5 grid gap-3">
@@ -266,7 +271,9 @@ export default function Home() {
                         {profile.email}
                       </div>
                       <div className="mt-1">
-                        <span className="font-medium text-slate-900">Location:</span>{" "}
+                        <span className="font-medium text-slate-900">
+                          Location:
+                        </span>{" "}
                         {profile.location}
                       </div>
                     </div>
@@ -279,11 +286,7 @@ export default function Home() {
 
         <Divider />
 
-        <Section
-          id="about"
-          title="About Me"
-          subtitle="A short intro:"
-        >
+        <Section id="about" title="About Me" subtitle="A short intro:">
           <div className="grid gap-4 md:grid-cols-3">
             <Card className="md:col-span-2">
               <div className="space-y-3 text-sm text-slate-700">
