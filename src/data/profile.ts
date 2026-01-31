@@ -25,32 +25,19 @@ export const profile = {
     tools: ["Git/GitHub", "REST APIs", "Docker", "Linux", "SLURM", "Vite"],
   },
 
+  // Only the 4 repos you asked to display
   projects: [
     {
-      name: "DistributedChat",
+      name: "CSC4008 Team Software Design Project",
       description:
-        "Distributed peer-to-peer chat system with real-time messaging and file transfer.",
-      tech: ["Java", "Sockets", "Concurrency"],
+        "Team-based software engineering project delivered for CSC4008, focused on maintainable design, collaboration, and a full-stack implementation.",
+      tech: ["React", "TypeScript", "REST APIs", "Software Design"],
       highlights: [
-        "Designed a multi-node messaging workflow with clear separation of concerns.",
-        "Implemented reliable communication and file transfer logic.",
+        "Built as part of a multi-developer team with clear division of responsibilities.",
+        "Focused on clean architecture, consistent patterns, and maintainable code.",
       ],
       links: {
-        repo: "https://github.com/lewismcgrogan/DistributedChat",
-        demo: "",
-      },
-    },
-    {
-      name: "Facial Recognition System",
-      description:
-        "MATLAB facial detection & recognition pipeline using feature extraction and classical ML classifiers.",
-      tech: ["MATLAB", "Computer Vision", "HOG", "LBP", "SVM", "KNN"],
-      highlights: [
-        "Combined multiple feature extractors with traditional classifiers for robust performance.",
-        "Built a full evaluation pipeline with structured experiment tracking.",
-      ],
-      links: {
-        repo: "https://github.com/lewismcgrogan/Facial-Recognition-System",
+        repo: "https://github.com/lewismcgrogan/CSC4008-Team-Software-Design-Project",
         demo: "",
       },
     },
@@ -69,44 +56,30 @@ export const profile = {
       },
     },
     {
-      name: "Knowledge Distillation for ECG Classification",
+      name: "DistributedChat",
       description:
-        "Final-year research project: ECG classifier using PTB-XL and knowledge distillation between CNN models.",
-      tech: ["Python", "PyTorch", "CNNs", "SLURM", "PTB-XL"],
+        "Distributed peer-to-peer chat system with real-time messaging and file transfer.",
+      tech: ["Java", "Sockets", "Concurrency"],
       highlights: [
-        "Built full reproducible training + evaluation pipeline on 21,799 multi-lead ECG recordings.",
-        "Explored temperature scaling and student-teacher capacity trade-offs.",
+        "Designed a multi-node messaging workflow with clear separation of concerns.",
+        "Implemented reliable communication patterns using core concurrency primitives.",
       ],
       links: {
-        repo: "",
+        repo: "https://github.com/lewismcgrogan/DistributedChat",
         demo: "",
       },
     },
     {
-      name: "Full-Stack Web Apps",
+      name: "Facial Recognition System",
       description:
-        "Team software engineering project with React/TypeScript front-ends and RESTful backends.",
-      tech: ["React", "TypeScript", "REST APIs", "Vite"],
+        "MATLAB facial detection & recognition pipeline using feature extraction and classical ML classifiers.",
+      tech: ["MATLAB", "Computer Vision", "HOG", "LBP", "SVM", "KNN"],
       highlights: [
-        "Integrated frontend with backend APIs using clear API contracts.",
-        "Focused on maintainable modular design and responsive layout.",
+        "Combined multiple feature extractors with traditional classifiers for robust performance.",
+        "Built a structured evaluation pipeline for comparing approaches.",
       ],
       links: {
-        repo: "",
-        demo: "",
-      },
-    },
-    {
-      name: "Personal Portfolio",
-      description:
-        "This portfolio site built with Next.js shows my work, skills, and contact info.",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-      highlights: [
-        "Built with modern stack (Next.js/Turbopack) and responsive design.",
-        "Integrates dynamic profile data and smooth navigation.",
-      ],
-      links: {
-        repo: "https://github.com/lewismcgrogan/Portfolio-Website",
+        repo: "https://github.com/lewismcgrogan/Facial-Recognition-System",
         demo: "",
       },
     },

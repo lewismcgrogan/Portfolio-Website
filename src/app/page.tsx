@@ -142,7 +142,7 @@ function ProjectCard({ p }: { p: any }) {
       </div>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        {p.tech.slice(0, 7).map((t: string) => (
+        {(p.tech ?? []).slice(0, 7).map((t: string) => (
           <Pill key={t}>{t}</Pill>
         ))}
       </div>
@@ -159,7 +159,7 @@ function ProjectCard({ p }: { p: any }) {
 }
 
 export default function Home() {
-  const featured = profile.projects.slice(0, 3);
+  const featured = profile.projects;
 
   return (
     <main>
@@ -220,10 +220,10 @@ export default function Home() {
               <p className="mt-4 max-w-2xl text-slate-700">{profile.tagline}</p>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                <PrimaryButton href={`mailto:${profile.email}`}>Email</PrimaryButton>
+                <PrimaryButton href={`mailto:${profile.email}`}>Email me</PrimaryButton>
                 <SecondaryButton href={profile.links.github}>GitHub</SecondaryButton>
                 <SecondaryButton href={profile.links.linkedin}>LinkedIn</SecondaryButton>
-                <SecondaryButton href={profile.links.cv}>CV</SecondaryButton>
+                <SecondaryButton href={profile.links.cv}>Download CV</SecondaryButton>
               </div>
 
               <div className="mt-7 flex flex-wrap gap-2">
@@ -240,8 +240,8 @@ export default function Home() {
                   Quick snapshot
                 </div>
                 <p className="mt-1 text-sm text-slate-600">
-                  Clean engineering, strong fundamentals, and projects you can
-                  read in 60 seconds.
+                  A quick overview of what I build — clean engineering, strong
+                  fundamentals, and projects you can skim in a minute.
                 </p>
 
                 <div className="mt-5 grid gap-3">
@@ -282,12 +282,12 @@ export default function Home() {
         <Section
           id="about"
           title="About"
-          subtitle="A short summary — readable, not waffle."
+          subtitle="A short intro — clear and to the point."
         >
           <div className="grid gap-4 md:grid-cols-3">
             <Card className="md:col-span-2">
               <div className="space-y-3 text-sm text-slate-700">
-                {profile.about.map((p: string) => (
+                {(profile.about ?? []).map((p: string) => (
                   <p key={p}>{p}</p>
                 ))}
               </div>
@@ -307,7 +307,7 @@ export default function Home() {
                 Frameworks
               </div>
               <div className="mt-3 flex flex-wrap gap-2">
-                {profile.skills.frameworks.map((s: string) => (
+                {(profile.skills.frameworks ?? []).map((s: string) => (
                   <Pill key={s}>{s}</Pill>
                 ))}
               </div>
@@ -318,7 +318,7 @@ export default function Home() {
         <Section
           id="projects"
           title="Projects"
-          subtitle="A few highlights — with links recruiters actually click."
+          subtitle="A few highlights — with links you can actually click."
         >
           <div className="grid gap-4 md:grid-cols-2">
             {featured.map((p: any) => (
@@ -327,11 +327,7 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section
-          id="skills"
-          title="Skills"
-          subtitle="Kept tight: what you actually use."
-        >
+        <Section id="skills" title="Skills" subtitle="What I actually use.">
           <div className="grid gap-4 md:grid-cols-3">
             <Card>
               <div className="text-xs uppercase tracking-wide text-slate-500">
@@ -349,7 +345,7 @@ export default function Home() {
                 Frameworks
               </div>
               <div className="mt-3 flex flex-wrap gap-2">
-                {profile.skills.frameworks.map((s: string) => (
+                {(profile.skills.frameworks ?? []).map((s: string) => (
                   <Pill key={s}>{s}</Pill>
                 ))}
               </div>
@@ -360,7 +356,7 @@ export default function Home() {
                 Tools
               </div>
               <div className="mt-3 flex flex-wrap gap-2">
-                {profile.skills.tools.map((s: string) => (
+                {(profile.skills.tools ?? []).map((s: string) => (
                   <GhostPill key={s}>{s}</GhostPill>
                 ))}
               </div>
@@ -371,7 +367,7 @@ export default function Home() {
         <Section
           id="contact"
           title="Contact"
-          subtitle="Fastest way to reach you."
+          subtitle="The quickest way to reach me."
         >
           <div className="grid gap-4 md:grid-cols-3">
             <Card className="md:col-span-1">
@@ -422,7 +418,7 @@ export default function Home() {
                 One-click email
               </div>
               <p className="mt-2 text-sm text-slate-600">
-                Opens your email client with a ready subject line.
+                This opens your email client with a pre-filled subject line.
               </p>
 
               <div className="mt-5 flex flex-wrap gap-3">
@@ -437,7 +433,7 @@ export default function Home() {
                 </PrimaryButton>
 
                 <SecondaryButton href={profile.links.github}>
-                  View GitHub
+                  View my GitHub
                 </SecondaryButton>
               </div>
             </Card>
@@ -445,7 +441,7 @@ export default function Home() {
         </Section>
 
         <footer className="py-12 text-sm text-slate-500">
-          © {new Date().getFullYear()} {profile.name}. Built with Next.js.
+          © {new Date().getFullYear()} {profile.name}. Built by me with Next.js.
         </footer>
       </Container>
     </main>
