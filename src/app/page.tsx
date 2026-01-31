@@ -321,7 +321,7 @@ export default function Home() {
         <Section
           id="projects"
           title="Selected Projects"
-          subtitle="A few highlights - with links to repositories."
+          subtitle="A few highlights with links to repositories - there are many more on my GitHub."
         >
           <div className="grid gap-4 md:grid-cols-2">
             {featured.map((p: any) => (

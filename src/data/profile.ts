@@ -15,7 +15,7 @@ export const profile = {
   },
 
   about: [
-    "Final-year MEng Computer Science student at Queen’s University Belfast with a strong academic record and a practical focus on full-stack web development and applied machine learning.",
+    "Final-year MEng Computer Science student at Queen’s University Belfast with a strong academic record and a focus on full-stack web development and applied machine learning.",
     "I build web applications end-to-end: React + TypeScript frontends, REST API integration, and backend logic with clean interfaces and maintainable structure.",
     "Alongside full-stack work, I’ve built reproducible ML pipelines in PyTorch, including experimental evaluation and model performance analysis.",
     "Currently seeking graduate software engineering roles starting 2026.",
