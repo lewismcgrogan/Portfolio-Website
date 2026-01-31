@@ -286,7 +286,7 @@ export default function Home() {
 
         <Divider />
 
-        <Section id="about" title="About Me" subtitle="A short intro:">
+        <Section id="about" title="About Me">
           <div className="grid gap-4 md:grid-cols-3">
             <Card className="md:col-span-2">
               <div className="space-y-3 text-sm text-slate-700">
