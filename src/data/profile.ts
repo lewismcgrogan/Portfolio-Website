@@ -31,7 +31,7 @@ export const profile = {
         "Designed and implemented a responsive website using Next.js and TypeScript.",
         "Built an online booking workflow allowing parents to submit class bookings via the website.",
         "Implemented a booking management system enabling the business to view and manage bookings submitted online.",
-        "Worked directly with the client to gather requirements and iterate on design, content and functionality.",
+        "Currently working directly with the client to gather requirements and iterate on design, content and functionality.",
         "Deployed the site publicly and ensured performance, responsiveness and usability across devices.",
       ],
       links: {
