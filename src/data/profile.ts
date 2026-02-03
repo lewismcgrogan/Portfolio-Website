@@ -24,7 +24,7 @@ export const profile = {
     {
       role: "Web Developer — Client Project",
       company: "The Belfast School of Speech & Drama",
-      dates: "2025",
+      dates: "2026",
       description:
         "Designed and built a production website for a long-running local performing arts school, including an online booking system and internal booking management functionality.",
       highlights: [
