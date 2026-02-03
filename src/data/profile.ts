@@ -7,7 +7,6 @@ export const profile = {
   location: "Belfast, Northern Ireland",
   email: "lewismartinmcgrogan@gmail.com",
 
-
   links: {
     github: "https://github.com/lewismcgrogan",
     linkedin: "https://www.linkedin.com/in/lewis-mc-grogan-944833270/",
@@ -19,6 +18,34 @@ export const profile = {
     "I build web applications end-to-end: React + TypeScript frontends, REST API integration, and backend logic with clean interfaces and maintainable structure.",
     "Alongside full-stack work, I’ve built reproducible ML pipelines in PyTorch, including experimental evaluation and model performance analysis.",
     "Currently seeking graduate software engineering roles starting 2026.",
+  ],
+
+  experience: [
+    {
+      role: "Web Developer — Client Project",
+      company: "The Belfast School of Speech & Drama",
+      dates: "2025",
+      description:
+        "Designed and built a production website for a long-running local performing arts school, including an online booking system and internal booking management functionality.",
+      highlights: [
+        "Designed and implemented a responsive website using Next.js and TypeScript.",
+        "Built an online booking workflow allowing parents to submit class bookings via the website.",
+        "Implemented a booking management system enabling the business to view and manage bookings submitted online.",
+        "Worked directly with the client to gather requirements and iterate on design, content and functionality.",
+        "Deployed the site publicly and ensured performance, responsiveness and usability across devices.",
+      ],
+      links: {
+        live: "https://speechanddrama.vercel.app",
+      },
+      tech: [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Booking systems",
+        "UI/UX",
+        "Deployment",
+      ],
+    },
   ],
 
   skills: {

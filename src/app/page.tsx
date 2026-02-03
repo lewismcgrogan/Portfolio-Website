@@ -55,22 +55,14 @@ function Section({
         <h2 className="text-xl font-semibold tracking-tight text-slate-900">
           {title}
         </h2>
-        {subtitle ? (
-          <p className="mt-1 text-sm text-slate-600">{subtitle}</p>
-        ) : null}
+        {subtitle ? <p className="mt-1 text-sm text-slate-600">{subtitle}</p> : null}
       </div>
       {children}
     </section>
   );
 }
 
-function PrimaryButton({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) {
+function PrimaryButton({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <a
       href={href}
@@ -83,13 +75,7 @@ function PrimaryButton({
   );
 }
 
-function SecondaryButton({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) {
+function SecondaryButton({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <a
       href={href}
@@ -158,6 +144,50 @@ function ProjectCard({ p }: { p: any }) {
   );
 }
 
+function ExperienceCard({ e }: { e: any }) {
+  return (
+    <Card className="transition hover:-translate-y-1">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h3 className="text-base font-semibold tracking-tight text-slate-900">
+            {e.role}
+          </h3>
+          <p className="mt-1 text-sm text-slate-600">
+            {e.company} • {e.dates}
+          </p>
+        </div>
+
+        {e.links?.live ? (
+          <a
+            className="shrink-0 text-sm text-sky-700 underline decoration-sky-300 underline-offset-4 hover:decoration-sky-500"
+            href={e.links.live}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Live site
+          </a>
+        ) : null}
+      </div>
+
+      <p className="mt-3 text-sm text-slate-700">{e.description}</p>
+
+      {e.highlights?.length ? (
+        <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm text-slate-700">
+          {e.highlights.map((h: string) => (
+            <li key={h}>{h}</li>
+          ))}
+        </ul>
+      ) : null}
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {(e.tech ?? []).map((t: string) => (
+          <Pill key={t}>{t}</Pill>
+        ))}
+      </div>
+    </Card>
+  );
+}
+
 export default function Home() {
   const featured = profile.projects;
 
@@ -179,18 +209,11 @@ export default function Home() {
             </a>
 
             <nav className="hidden gap-6 text-sm text-slate-700 sm:flex">
-              <a className="hover:text-slate-900" href="#about">
-                About
-              </a>
-              <a className="hover:text-slate-900" href="#projects">
-                Projects
-              </a>
-              <a className="hover:text-slate-900" href="#skills">
-                Skills
-              </a>
-              <a className="hover:text-slate-900" href="#contact">
-                Contact
-              </a>
+              <a className="hover:text-slate-900" href="#about">About</a>
+              <a className="hover:text-slate-900" href="#experience">Experience</a>
+              <a className="hover:text-slate-900" href="#projects">Projects</a>
+              <a className="hover:text-slate-900" href="#skills">Skills</a>
+              <a className="hover:text-slate-900" href="#contact">Contact</a>
             </nav>
           </div>
         </Container>
@@ -217,36 +240,23 @@ export default function Home() {
                 {profile.location}
               </p>
 
-              <p className="mt-4 max-w-2xl text-slate-700">
-                {profile.tagline}
-              </p>
+              <p className="mt-4 max-w-2xl text-slate-700">{profile.tagline}</p>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                <PrimaryButton href={`mailto:${profile.email}`}>
-                  Email me
-                </PrimaryButton>
-                <SecondaryButton href={profile.links.github}>
-                  GitHub
-                </SecondaryButton>
-                <SecondaryButton href={profile.links.linkedin}>
-                  LinkedIn
-                </SecondaryButton>
-                <SecondaryButton href={profile.links.cv}>
-                  Download CV
-                </SecondaryButton>
+                <PrimaryButton href={`mailto:${profile.email}`}>Email me</PrimaryButton>
+                <SecondaryButton href={profile.links.github}>GitHub</SecondaryButton>
+                <SecondaryButton href={profile.links.linkedin}>LinkedIn</SecondaryButton>
+                <SecondaryButton href={profile.links.cv}>Download CV</SecondaryButton>
               </div>
             </div>
 
             <Card className="relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-sky-100/70 via-white/40 to-blue-100/60" />
               <div className="relative">
-                <div className="text-sm font-semibold text-slate-900">
-                  Snapshot
-                </div>
+                <div className="text-sm font-semibold text-slate-900">Snapshot</div>
                 <p className="mt-1 text-sm text-slate-600">
-                  A quick overview of what I can build, and have built — clean
-                  engineering, strong fundamentals, and projects you can skim in
-                  a minute.
+                  A quick overview of what I can build, and have built — clean engineering,
+                  strong fundamentals, and projects you can skim in a minute.
                 </p>
 
                 <div className="mt-5 grid gap-3">
@@ -271,9 +281,7 @@ export default function Home() {
                         {profile.email}
                       </div>
                       <div className="mt-1">
-                        <span className="font-medium text-slate-900">
-                          Location:
-                        </span>{" "}
+                        <span className="font-medium text-slate-900">Location:</span>{" "}
                         {profile.location}
                       </div>
                     </div>
@@ -297,9 +305,7 @@ export default function Home() {
             </Card>
 
             <Card>
-              <div className="text-xs uppercase tracking-wide text-slate-500">
-                Core stack
-              </div>
+              <div className="text-xs uppercase tracking-wide text-slate-500">Core stack</div>
               <div className="mt-3 flex flex-wrap gap-2">
                 {profile.skills.languages.slice(0, 4).map((s: string) => (
                   <Pill key={s}>{s}</Pill>
@@ -319,6 +325,18 @@ export default function Home() {
         </Section>
 
         <Section
+          id="experience"
+          title="Work Experience"
+          subtitle="Real-world development work with live users."
+        >
+          <div className="grid gap-4 md:grid-cols-2">
+            {(profile.experience ?? []).map((e: any) => (
+              <ExperienceCard key={`${e.company}-${e.role}`} e={e} />
+            ))}
+          </div>
+        </Section>
+
+        <Section
           id="projects"
           title="Selected Projects"
           subtitle="A few highlights with links to repositories - there are many more on my GitHub."
@@ -333,9 +351,7 @@ export default function Home() {
         <Section id="skills" title="Skills" subtitle="What I actually use.">
           <div className="grid gap-4 md:grid-cols-3">
             <Card>
-              <div className="text-xs uppercase tracking-wide text-slate-500">
-                Languages
-              </div>
+              <div className="text-xs uppercase tracking-wide text-slate-500">Languages</div>
               <div className="mt-3 flex flex-wrap gap-2">
                 {profile.skills.languages.map((s: string) => (
                   <Pill key={s}>{s}</Pill>
@@ -344,9 +360,7 @@ export default function Home() {
             </Card>
 
             <Card>
-              <div className="text-xs uppercase tracking-wide text-slate-500">
-                Frameworks
-              </div>
+              <div className="text-xs uppercase tracking-wide text-slate-500">Frameworks</div>
               <div className="mt-3 flex flex-wrap gap-2">
                 {(profile.skills.frameworks ?? []).map((s: string) => (
                   <Pill key={s}>{s}</Pill>
@@ -355,9 +369,7 @@ export default function Home() {
             </Card>
 
             <Card>
-              <div className="text-xs uppercase tracking-wide text-slate-500">
-                Tools
-              </div>
+              <div className="text-xs uppercase tracking-wide text-slate-500">Tools</div>
               <div className="mt-3 flex flex-wrap gap-2">
                 {(profile.skills.tools ?? []).map((s: string) => (
                   <GhostPill key={s}>{s}</GhostPill>
@@ -367,16 +379,10 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section
-          id="contact"
-          title="Contact"
-          subtitle="The quickest way to reach me."
-        >
+        <Section id="contact" title="Contact" subtitle="The quickest way to reach me.">
           <div className="grid gap-4 md:grid-cols-3">
             <Card className="md:col-span-1">
-              <div className="text-xs uppercase tracking-wide text-slate-500">
-                Email
-              </div>
+              <div className="text-xs uppercase tracking-wide text-slate-500">Email</div>
               <a
                 className="mt-2 inline-block text-sm font-semibold text-slate-900 underline decoration-sky-300 underline-offset-4 hover:decoration-sky-500"
                 href={`mailto:${profile.email}`}
@@ -417,9 +423,7 @@ export default function Home() {
             </Card>
 
             <Card className="md:col-span-2">
-              <div className="text-sm font-semibold text-slate-900">
-                One-click email
-              </div>
+              <div className="text-sm font-semibold text-slate-900">One-click email</div>
               <p className="mt-2 text-sm text-slate-600">
                 This opens your email client with a pre-filled subject line.
               </p>
@@ -435,9 +439,7 @@ export default function Home() {
                   Compose email
                 </PrimaryButton>
 
-                <SecondaryButton href={profile.links.github}>
-                  View my GitHub
-                </SecondaryButton>
+                <SecondaryButton href={profile.links.github}>View my GitHub</SecondaryButton>
               </div>
             </Card>
           </div>
