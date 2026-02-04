@@ -326,7 +326,7 @@ export default function Home() {
 
         <Section
           id="experience"
-          title="Work Experience"
+          title="Industry Experience"
           subtitle="Real-world development work with live users."
         >
           <div className="grid gap-4 md:grid-cols-2">
@@ -338,7 +338,7 @@ export default function Home() {
 
         <Section
           id="projects"
-          title="Selected Projects"
+          title="Selected Personal Projects"
           subtitle="A few highlights with links to repositories - there are many more on my GitHub."
         >
           <div className="grid gap-4 md:grid-cols-2">

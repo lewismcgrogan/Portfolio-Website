@@ -22,7 +22,23 @@ export const profile = {
 
   experience: [
     {
-      role: "Web Developer — Client Project",
+      role: "Web Development — Client Project",
+      company: "Fashion Portfolio Website (Manchester)",
+      dates: "2026 — Present",
+      description:
+        "Currently designing and developing a portfolio website for a fashion student, focusing on clean visual presentation, performance, and responsive layout.",
+      highlights: [
+        "Building a modern, responsive website using Next.js and Tailwind CSS.",
+        "Working closely with the client to translate creative vision into a functional web presence.",
+        "Deployed and iterated on the site using Vercel with ongoing refinements.",
+      ],
+      links: {
+        live: "https://leahogara.vercel.app",
+      },
+      tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    },
+    {
+      role: "Web Development — Client Project",
       company: "The Belfast School of Speech & Drama",
       dates: "2026",
       description:
@@ -31,7 +47,7 @@ export const profile = {
         "Designed and implemented a responsive website using Next.js and TypeScript.",
         "Built an online booking workflow allowing parents to submit class bookings via the website.",
         "Implemented a booking management system enabling the business to view and manage bookings submitted online.",
-        "Currently working directly with the client to gather requirements and iterate on design, content and functionality.",
+        "Worked directly with the client to gather requirements and iterate on design, content and functionality.",
         "Deployed the site publicly and ensured performance, responsiveness and usability across devices.",
       ],
       links: {
